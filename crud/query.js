@@ -33,7 +33,7 @@ const updateBook = async () => {
 
 
 //Delete a book
-//I created deleteAll because the first set of books didnt have publisher id. However, the debug was successful and new publisher id was inserted.
+
 const deleteAll = async () => {
   const deleteBooks = await Book.deleteMany();
   console.log("Delete all books", deleteBooks);
@@ -52,16 +52,9 @@ const findAll = async () => {
 const run = async () => {
   
   await findAll();
-  // await updateBook();
-
-  // await deleteAll()
-
-  process.exit()  
+    process.exit()  
 }
 run()
 
 
-//node query.js
-
-//you need two terminal one for mongo and the other for MongoDB-data-model
 
